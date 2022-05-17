@@ -7,11 +7,6 @@ if ($usuario == null || $usuario == "") {
     header("Location: ../scripts/cerrarSesion.php");
 }
 
-require('../scripts/conexion.php"');
-$sentencia = $con->prepare("SELECT perfil FROM usuario where idusuario = :id");
-$sentencia->bindParam(':id', $idusu, PDO::PARAM_STR);
-$sentencia->execute();
-$resultado = $sentencia->fetch();
 
 ?>
 
@@ -19,19 +14,12 @@ $resultado = $sentencia->fetch();
     <div class="menuDesplegarMd">
         <figure class="contenedorAvatar">
             <i class="far fa-times-circle cerrarMenu mostrarBar"></i>
-            <img src="<?php if($resultado[0]==null || $resultado[0]==""){echo "./assets/avatarMenu.jpg"; }else{echo $resultado[0];}  ?>" class="img-fluid avatar mx-auto d-block" id="foto_perfil">
-            <figcaption class="roboto-medium text-center textoUsuario">
-                <?= $usuario ?> <br><small class="roboto-condensed-light"> <?php if ($tusu === "Restringido") {
-                                                                                echo "Ases@r";
-                                                                            } else {
-                                                                                echo $tusu;
-                                                                            } ?></small>
-            </figcaption>
+            
         </figure>
         <br>
         <nav class="contenidoMenu">
             <ul>
-                <?php if ($tusu == "Administrador") : ?>
+                
                     <li>
                         <span class="item-menu" href="#" id="mostrarSub" style="font-size: 16px;"><i class="fas fa-user-tie fa-fw"></i>&nbsp; Asesores <i class="fas fa-chevron-down"></i></span>
                         <ul class="sub-menu">
@@ -43,7 +31,7 @@ $resultado = $sentencia->fetch();
                             </li>
                         </ul>
                     </li>
-                <?php endif ?>
+               
                 <li>
                     <span class="item-menu" href="#" id="mostrarSub" style="font-size: 16px;"><i class="fas fa-users fa-fw"></i>&nbsp; Clientes <i class="fas fa-chevron-down"></i></span>
                     <ul class="sub-menu">
@@ -91,7 +79,7 @@ $resultado = $sentencia->fetch();
                 <li>
                     <span class="item-menu" href="#" id="mostrarSub" style="font-size: 16px;"><i class="fas fa-car"></i>&nbsp; Vehículos<i class="fas fa-chevron-down"></i></span>
                     <ul class="sub-menu">
-                        <?php if ($tusu == "Administrador") : ?>
+                    
                             <li>
                                 <a href="nuevaMovilidad.php" style="font-size: 16px;"><i class="fas fa-plus fa-fw"></i> &nbsp; Registrar vehículo</a>
                             </li>
@@ -101,7 +89,7 @@ $resultado = $sentencia->fetch();
                             <li>
                                 <a href="busquedaMovilidad.php" style="font-size: 16px;"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar vehículo</a>
                             </li>
-                        <?php else : ?>
+                     
                             <li>
                                 <a href="listaMovilidad.php" style="font-size: 16px;"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de vehículos</a>
                             </li>
@@ -129,7 +117,7 @@ $resultado = $sentencia->fetch();
                         </li>
                     </ul>
                 </li>
-            <?php endif ?>
+   
             </ul>
         </nav>
     </div>
