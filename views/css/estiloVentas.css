@@ -1,0 +1,598 @@
+/* OPCIONES RAPIDAS*/
+
+.opciones {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    margin-top: 15px;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.opciones li {
+    margin: 5px 20px;
+    height: 40px;
+    line-height: 40px;
+    list-style: none;
+}
+
+.opciones li a {
+    height: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+    min-width: 200px;
+    width: auto;
+    display: block;
+    text-align: center;
+    user-select: none;
+    transition: all .2s ease-in-out;
+    border-bottom: 2px solid transparent;
+}
+
+.opciones li a.active {
+    color: rgb(216, 100, 54);
+    cursor: none;
+    pointer-events: none;
+}
+
+.opciones a {
+    position: relative;
+}
+
+.opciones li a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(216, 100, 54);
+    z-index: 100;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.5s ease-in-out;
+}
+
+.opciones a:hover::before {
+    transform: scaleX(1);
+}
+
+.botonGuardar {
+    background-color: rgb(99, 54, 184);
+    color: rgb(255, 255, 255);
+    transition: all .2s ease-in-out;
+}
+
+.botonGuardar:hover {
+    background-color: rgb(154, 117, 223);
+    border-color: rgb(163, 113, 221);
+    color: rgb(0, 0, 0);
+}
+
+.botonLimpiar:checked {
+    box-shadow: 16px 16px rgb(230, 176, 105) !important;
+}
+
+.botonGuardar:checked {
+    box-shadow: rgb(154, 117, 223) !important;
+}
+
+body::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+body::-webkit-scrollbar:vertical {
+    width: 7px;
+}
+
+body::-webkit-scrollbar-button:increment,
+.contenedor::-webkit-scrollbar-button {
+    display: none;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #917d9e;
+    border-radius: 20px;
+    border: 1px solid #171718;
+}
+
+body::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+.titulo {
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+label {
+    color: rgb(0, 0, 0);
+    padding-top: 10px;
+    margin-bottom: 0;
+    font-size: 13px!important;
+}
+
+legend {
+    font-size: 17px;
+}
+
+.datosCliente {
+    background-color: rgb(221, 221, 209);
+    padding-bottom: 5px;
+    border: 1px solid rgb(99, 117, 99);
+    border-radius: 7px;
+}
+
+.tituloTipoVenta {
+    font-weight: bold;
+}
+
+.fotoC {
+    margin-top: 10px;
+}
+
+.ajustarInput {
+    margin: 0;
+}
+
+.contenedorTablaBus {
+    width: 95%;
+    padding: 6px;
+    margin: 0px auto;
+}
+
+
+/*ESTILO LISTA VENTA */
+
+.botonReporteVenta {
+    color: rgb(255, 255, 255);
+    background-color: rgb(71, 151, 98);
+    border-radius: 25%;
+    text-align: center;
+    line-height: normal;
+    font-size: 15px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+}
+
+.botonOpciones {
+    border-radius: 25%;
+    text-align: center;
+    line-height: normal;
+    font-size: 15px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    margin-top: 40px;
+}
+
+.botonReporteVenta:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(52, 129, 77);
+}
+
+.tabla thead {
+    background-color: rgb(56, 48, 77);
+    color: rgb(252, 242, 242);
+}
+
+.tabla tbody tr {
+    background-color: rgb(238, 240, 244);
+    margin-right: 20px;
+}
+
+.tabla tbody tr:hover {
+    background-image: linear-gradient(230deg, #cce6ee 0, #cde6f0 7.14%, #cfe5f1 14.29%, #d0e5f2 21.43%, #d2e4f3 28.57%, #d5e3f4 35.71%, #d7e3f4 42.86%, #dae2f4 50%, #dde1f4 57.14%, #e0e0f3 64.29%, #e3e0f2 71.43%, #e5dff1 78.57%, #e8def0 85.71%, #ebdeee 92.86%, #edddec 100%);
+    color: rgb(138, 52, 26);
+}
+
+.contenedorTabla {
+    width: 100%;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.tablaBus {
+    color: rgb(0, 0, 0);
+    margin-bottom: 0;
+    text-align: center;
+    width: 98%;
+}
+
+.tablaBus td {
+    border-radius: 7px!important;
+}
+
+.montoT {
+    background-color: #1d2830 !important;
+    border-color: rgb(30, 13, 50)!important;
+    color: rgb(255, 255, 255);
+}
+
+.montoT:hover {
+    background-color: #2b2c2d !important;
+    border-color: rgb(30, 13, 50)!important;
+    color: rgb(255, 255, 255);
+}
+
+.tablaBus tr {
+    color: rgb(0, 0, 0) !important;
+    background-color: rgb(220, 220, 220) !important;
+}
+
+.tablaBusM {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.tablaBusM td {
+    border-radius: 7px;
+}
+
+.tablaBusM tr {
+    color: rgb(255, 255, 255) !important;
+    background-color: rgb(78, 38, 103) !important;
+    text-align: center;
+}
+
+.tablaBusM tr:hover {
+    color: rgb(255, 255, 255) !important;
+    background-color: rgb(82, 69, 97) !important;
+}
+
+.tablaBusV tr {
+    color: rgb(0, 0, 0) !important;
+    background-color: rgb(220, 219, 220) !important;
+    font-size: 14px!important;
+}
+
+.tablaBusV td {
+    border-radius: 7px;
+}
+
+.botonActualiza {
+    background-color: rgb(42, 82, 156);
+    border-radius: 25%;
+    width: 40px;
+    height: 40px;
+    color: rgb(255, 255, 255);
+}
+
+.botonActualiza:hover {
+    background-color: rgb(59, 148, 93);
+    border-radius: 25%;
+    width: 40px;
+    height: 40px;
+    color: rgb(255, 255, 255);
+}
+
+.botonEditaVenta {
+    background-color: rgb(154, 80, 62);
+    border-radius: 25%;
+    width: 30px;
+    height: 30px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    line-height: normal;
+    font-size: 15px;
+    padding: 5px;
+}
+
+.botonReporteVenta i {
+    font-size: 11px;
+}
+
+.botonEditaVenta i {
+    font-size: 11px;
+}
+
+.botonEditaVenta:hover {
+    background-color: rgb(202, 41, 41);
+    color: rgb(255, 255, 255);
+}
+
+.swal-wide {
+    width: 250px;
+    font-size: 16px;
+}
+
+.botonBuscar {
+    background-color: rgb(134, 190, 132);
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    padding: 5px;
+}
+
+.botonBuscar:hover {
+    background-color: rgb(50, 112, 48);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.paginador {
+    display: block;
+    margin: auto;
+}
+
+.atras {
+    background-color: rgb(148, 158, 152);
+    color: rgb(255, 255, 255);
+}
+
+.adelante {
+    background-color: rgb(148, 158, 152);
+    color: rgb(255, 255, 255);
+}
+
+.atras:hover {
+    background-color: rgb(24, 119, 62);
+    color: rgb(255, 255, 255);
+}
+
+.adelante:hover {
+    background-color: rgb(24, 119, 62);
+    color: rgb(255, 255, 255);
+}
+
+.numpag a {
+    background-color: rgb(245, 236, 236);
+    color: rgb(0, 0, 0);
+    border-radius: 15%;
+}
+
+.numpag a:hover {
+    background-color: rgb(211, 138, 89);
+    color: rgb(245, 236, 236)
+}
+
+.active.numpag a {
+    background-color: rgb(211, 138, 89) !important;
+    color: rgb(245, 236, 236) !important;
+    border-radius: 15% !important;
+    border-color: rgb(211, 138, 89) !important;
+}
+
+.active.numpag {
+    background-color: rgb(211, 138, 89) !important;
+    color: rgb(245, 236, 236) !important;
+    border-radius: 15% !important;
+    border-color: rgb(211, 138, 89) !important;
+}
+
+.descargaPDF {
+    color: rgb(255, 255, 255);
+    background-color: rgb(108, 207, 141);
+    width: 30px;
+    height: 30px;
+    border-radius: 25%;
+    text-align: center;
+    line-height: normal;
+    font-size: 15px;
+    padding: 5px;
+}
+
+.descargaPDF:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(52, 129, 77);
+    color: rgb(255, 255, 255);
+}
+
+.descargaPDF i {
+    padding: 10px;
+    color: rgb(255, 255, 255);
+}
+
+
+/* ESTILO BUSQUEDA VENTA*/
+
+.tablaresbusCI {
+    display: none;
+    margin: auto;
+    text-align: center;
+}
+
+.tablaresbusM {
+    display: none;
+}
+
+label {
+    color: rgb(109, 106, 106);
+    padding-top: 10px;
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+.busqueda {
+    background-color: rgb(222, 222, 222);
+    border-radius: 2px;
+    width: 100%;
+    margin: auto;
+    padding-top: 5px;
+    margin-bottom: 50px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.ventaBusqueda,
+.formularioVenta {
+    background-color: rgb(246, 246, 246);
+    border-radius: 3px;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #40699e;
+}
+
+.botonElimina {
+    background-color: rgb(154, 80, 62);
+    border-radius: 25%;
+    width: 30px;
+    height: 30px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    line-height: normal;
+    font-size: 15px;
+    padding: 5px;
+}
+
+.botonElimina:hover {
+    background-color: rgb(202, 41, 41);
+    color: rgb(255, 255, 255);
+}
+
+.botonEdita {
+    border-radius: 25%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: normal;
+    font-size: 15px;
+    padding: 5px;
+}
+
+.botonEdita:hover {}
+
+.labelBusqueda {
+    font-weight: bold;
+    font-size: 13px!important;
+}
+
+
+/*ESTILO REPORTE VENTA */
+
+.logoReporte {
+    margin-left: 60px !important;
+    margin-top: 40px !important;
+    height: 100px;
+    width: 100px;
+    display: inline;
+}
+
+.nombreEmpresa {
+    font-size: 22px;
+    margin-top: 55px !important;
+    margin-left: 8px !important;
+    display: inline-block;
+}
+
+.fecha {
+    margin-top: -60px !important;
+    margin-left: 470px !important;
+    font-size: 16px !important;
+    margin-right: 30px !important;
+    display: inline-block;
+}
+
+.tablaReporte thead {
+    /*border-style: solid;
+    border-width: 1px;
+    border-color: rgb(16, 131, 45);*/
+    background-color: rgb(31, 13, 53);
+    color: rgb(255, 255, 255)
+}
+
+.tablaReporte tbody {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(34, 48, 37);
+}
+
+.datosCA {
+    margin-top: 100px;
+}
+
+.reporteVentasFecha {
+    font-size: 12px;
+}
+
+@media (min-width: 1500px) {
+    .formularioVenta {
+        margin: 0;
+        width: 100%;
+        margin-top: 100px;
+    }
+    .contenedorTabla {
+        width: 100%;
+    }
+    .tabla {
+        margin: 0;
+        width: 100%;
+        margin-top: 100px;
+        height: 500px;
+    }
+    .paginador {
+        margin-top: 100px;
+    }
+}
+
+@media (max-width:500px) {
+    .calculaTotal {
+        margin-left: 20% !important;
+    }
+}
+
+@media (max-width:800px) {
+    .calculaTotal {
+        margin-left: 50% !important;
+    }
+    .selecAsesor {
+        width: 98%;
+    }
+}
+
+@media (min-width:810px) {
+    .calculaTotal {
+        margin-left: 60% !important;
+    }
+}
+
+@media (max-width: 800px) {
+    .botonReporteVenta {
+        display: none;
+    }
+    .descargaPDF {
+        display: inline-block;
+    }
+    .botonOpciones {
+        margin-top: 20px;
+        margin-left: 50px;
+    }
+}
+
+@media (min-width: 801px) {
+    .botonReporteVenta {
+        display: inline-block;
+    }
+    .descargaPDF {
+        display: none;
+    }
+    .swal-wide {
+        width: 400px;
+        font-size: 16px;
+    }
+    .fechaI,
+    .fechaF {
+        display: inline !important;
+    }
+}
+
+@media (max-width: 900px) {
+    .fechasReporte {
+        margin-left: 30px;
+    }
+}
+
+@media (min-width: 900px) {
+    .fechasReporte {
+        margin-left: 30px;
+    }
+}

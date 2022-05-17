@@ -1,0 +1,121 @@
+/* OPCIONES RAPIDAS*/
+
+.opciones {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    margin-top: 15px;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.opciones li {
+    margin: 5px 20px;
+    height: 40px;
+    line-height: 40px;
+    list-style: none;
+}
+
+.opciones li a {
+    height: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+    min-width: 200px;
+    width: auto;
+    display: block;
+    text-align: center;
+    user-select: none;
+    transition: all .2s ease-in-out;
+    border-bottom: 2px solid transparent;
+}
+
+.opciones li a.active {
+    color: rgb(216, 100, 54);
+    cursor: none;
+    pointer-events: none;
+}
+
+.opciones a {
+    position: relative;
+}
+
+.opciones li a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(216, 100, 54);
+    z-index: 100;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.5s ease-in-out;
+}
+
+.opciones a:hover::before {
+    transform: scaleX(1);
+}
+
+.formularioPago {
+    border: 1px solid #409e54;
+    background-color: rgb(186, 226, 174);
+    padding: 15px;
+    border-radius: 3px;
+    margin-right: 25px;
+    margin-left: 25px;
+    margin-bottom: 30px;
+    color: rgb(0, 0, 0);
+}
+
+label {
+    color: rgb(0, 0, 0);
+    padding-top: 10px;
+    margin-bottom: 0;
+}
+
+.calendario {
+    display: inline-block;
+    width: 100%;
+    margin: auto;
+    align-content: center;
+    text-align: center;
+}
+
+.datosProveedor {
+    border: 1px solid #6d5d69;
+    background-color: rgb(195, 179, 190);
+    padding: 15px;
+    border-radius: 3px;
+    margin-right: 10px;
+    margin-left: 1px;
+    margin-bottom: 0px;
+    color: rgb(0, 0, 0);
+}
+
+body::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+body::-webkit-scrollbar:vertical {
+    width: 7px;
+}
+
+body::-webkit-scrollbar-button:increment,
+.contenedor::-webkit-scrollbar-button {
+    display: none;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #917d9e;
+    border-radius: 20px;
+    border: 1px solid #171718;
+}
+
+body::-webkit-scrollbar-track {
+    border-radius: 10px;
+}

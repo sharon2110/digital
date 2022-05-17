@@ -1,0 +1,592 @@
+/* OPCIONES RAPIDAS*/
+
+.opciones {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    margin-top: 15px;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.opciones li {
+    margin: 5px 20px;
+    height: 40px;
+    line-height: 40px;
+    list-style: none;
+}
+
+.opciones li a {
+    height: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+    min-width: 200px;
+    width: auto;
+    display: block;
+    text-align: center;
+    user-select: none;
+    transition: all .2s ease-in-out;
+    border-bottom: 2px solid transparent;
+}
+
+.opciones li a.active {
+    color: rgb(216, 100, 54);
+    cursor: none;
+    pointer-events: none;
+}
+
+.opciones a {
+    position: relative;
+}
+
+.opciones li a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(216, 100, 54);
+    z-index: 100;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.5s ease-in-out;
+}
+
+.opciones a:hover::before {
+    transform: scaleX(1);
+}
+
+
+/* FORMULARIO DE REGISTRO */
+
+legend {
+    font-size: 17px;
+}
+
+.formulario {
+    border: 1px solid #707ea0;
+    background-color: #e3e3e9;
+    padding: 15px;
+    border-radius: 3px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 30px;
+    width: 80%;
+}
+
+label {
+    color: rgb(109, 106, 106);
+    padding-top: 10px;
+    margin-bottom: 0;
+    font-size: 13px;
+}
+
+.form-control {
+    margin-top: 5px;
+}
+
+body main section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+body #perfil {
+    background-color: rgb(125, 124, 131);
+    width: 150px;
+    height: 100px;
+    border: 2px dotted white;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-left: 5px;
+    padding: 0;
+}
+
+body #perfil i {
+    color: white;
+    font-size: 30px;
+}
+
+body #perfil input {
+    display: none;
+}
+
+body #perfil img {
+    display: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    margin: 0;
+    padding: 0;
+}
+
+.curriculum {}
+
+.inputFile {
+    display: none;
+}
+
+.nombreArch,
+.botonInput {
+    display: inline-block;
+    border-radius: 16px;
+    padding: 7px 15px;
+}
+
+.botonInput {
+    background-color: rgb(73, 119, 138);
+    width: 150px;
+    height: 40px;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 5px;
+    padding: auto;
+}
+
+.botonInput:hover {
+    background-color: rgb(43, 93, 114);
+}
+
+.nombreArch {
+    border: 1px solid rgb(106, 139, 153);
+    width: calc(100% - 190px);
+    height: 40px;
+    margin-top: 0px;
+    float: right;
+}
+
+.botonLimpiar {
+    background-color: rgb(216, 146, 54);
+    color: rgb(255, 255, 255);
+    transition: all .2s ease-in-out;
+}
+
+.botonGuardar {
+    background-color: rgb(99, 54, 184);
+    color: rgb(255, 255, 255);
+    transition: all .2s ease-in-out;
+}
+
+.botonLimpiar:hover {
+    background-color: rgb(230, 176, 105);
+    border-color: rgb(230, 176, 105);
+    color: rgb(0, 0, 0);
+}
+
+.botonGuardar:hover {
+    background-color: rgb(154, 117, 223);
+    border-color: rgb(163, 113, 221);
+    color: rgb(0, 0, 0);
+}
+
+.botonLimpiar:checked {
+    box-shadow: 16px 16px rgb(230, 176, 105) !important;
+}
+
+.botonGuardar:checked {
+    box-shadow: rgb(154, 117, 223) !important;
+}
+
+body::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+body::-webkit-scrollbar:vertical {
+    width: 7px;
+}
+
+body::-webkit-scrollbar-button:increment,
+.contenedor::-webkit-scrollbar-button {
+    display: none;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #917d9e;
+    border-radius: 20px;
+    border: 1px solid #171718;
+}
+
+body::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+
+/*ESTILOS DE LISTA ASESORES */
+
+.botonVerCurriculum {
+    background-color: rgb(194, 165, 103);
+    border-radius: 25%;
+    width: 30px;
+    height: 30px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    line-height: normal;
+    font-size: 15px;
+    padding: 5px;
+}
+
+.botonVerCurriculum:hover {
+    background-color: rgb(175, 142, 49);
+    border-radius: 25%;
+    width: 30px;
+    height: 30px;
+    color: rgb(255, 255, 255);
+}
+
+.botonVerCroquis {
+    background-color: rgb(132, 122, 221);
+    border-radius: 25%;
+    width: 30px;
+    height: 30px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    line-height: normal;
+    font-size: 15px;
+    padding: 5px;
+}
+
+.botonVerCroquis:hover {
+    background-color: rgb(106, 38, 184);
+    border-radius: 25%;
+    width: 30px;
+    height: 30px;
+    color: rgb(255, 255, 255);
+}
+
+.contenedorTabla {
+    width: 100%;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.tabla thead {
+    background-color: rgb(56, 48, 77);
+    color: rgb(252, 242, 242);
+}
+
+.tabla tbody tr {
+    background-color: rgb(238, 240, 244);
+    margin-right: 20px;
+}
+
+.tabla tbody tr:hover {
+    background-image: linear-gradient(230deg, #cce6ee 0, #cde6f0 7.14%, #cfe5f1 14.29%, #d0e5f2 21.43%, #d2e4f3 28.57%, #d5e3f4 35.71%, #d7e3f4 42.86%, #dae2f4 50%, #dde1f4 57.14%, #e0e0f3 64.29%, #e3e0f2 71.43%, #e5dff1 78.57%, #e8def0 85.71%, #ebdeee 92.86%, #edddec 100%);
+    color: rgb(138, 52, 26);
+}
+
+.botonActualiza {
+    background-color: rgb(42, 82, 156);
+    border-radius: 25%;
+    width: 30px;
+    height: 30px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    line-height: normal;
+    font-size: 15px;
+    padding: 5px;
+}
+
+.botonCambiarPassword {
+    border-radius: 25%!important;
+    width: 30px !important;
+    height: 30px !important;
+    color: rgb(255, 255, 255)!important;
+    text-align: center !important;
+    line-height: normal!important;
+    font-size: 15px !important;
+    padding: 5px !important;
+}
+
+.botonActualiza:hover {
+    background-color: rgb(59, 148, 93);
+    border-radius: 25%;
+    width: 30px;
+    height: 30px;
+    color: rgb(255, 255, 255);
+}
+
+.botonBuscar {
+    background-color: rgb(134, 190, 132);
+    color: rgb(0, 0, 0);
+}
+
+.botonBuscar:hover {
+    background-color: rgb(50, 112, 48);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.paginador {
+    display: block;
+    margin: auto;
+}
+
+.atras {
+    background-color: rgb(148, 158, 152);
+    color: rgb(255, 255, 255);
+}
+
+.adelante {
+    background-color: rgb(148, 158, 152);
+    color: rgb(255, 255, 255);
+}
+
+.atras:hover {
+    background-color: rgb(24, 119, 62);
+    color: rgb(255, 255, 255);
+}
+
+.adelante:hover {
+    background-color: rgb(24, 119, 62);
+    color: rgb(255, 255, 255);
+}
+
+.numpag a {
+    background-color: rgb(245, 236, 236);
+    color: rgb(0, 0, 0);
+    border-radius: 15%;
+}
+
+.numpag a:hover {
+    background-color: rgb(211, 138, 89);
+    color: rgb(245, 236, 236)
+}
+
+.active.numpag a {
+    background-color: rgb(211, 138, 89) !important;
+    color: rgb(245, 236, 236) !important;
+    border-radius: 15% !important;
+    border-color: rgb(211, 138, 89) !important;
+}
+
+.active.numpag {
+    background-color: rgb(211, 138, 89) !important;
+    color: rgb(245, 236, 236) !important;
+    border-radius: 15% !important;
+    border-color: rgb(211, 138, 89) !important;
+}
+
+.descargaPDF {
+    color: rgb(255, 255, 255);
+    background-color: rgb(194, 165, 103);
+    border-radius: 25%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: normal;
+    font-size: 15px;
+    padding: 5px;
+}
+
+.descargaPDF:hover {
+    background-color: rgb(175, 142, 49);
+    border-radius: 25%;
+    width: 30px;
+    height: 30px;
+    color: rgb(255, 255, 255);
+}
+
+.descargaPDF i {
+    padding: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.descargaCroquis {
+    color: rgb(255, 255, 255);
+    background-color: rgb(106, 38, 184);
+    border-radius: 25%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: normal;
+    font-size: 15px;
+    padding: 5px;
+}
+
+.descargaCroquis:hover {
+    background-color: rgb(106, 38, 184);
+    border-radius: 25%;
+    width: 30px;
+    height: 30px;
+    color: rgb(255, 255, 255);
+}
+
+.descargaCroquis i {
+    padding: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.verCroquis {
+    zoom: 0%;
+}
+
+.botonQuitaCroquis {
+    display: inline-block;
+    height: 25px;
+    margin-right: auto;
+    padding: 0px;
+    width: 5%;
+    margin-top: 8px;
+}
+
+@media (min-width: 1500px) {
+    .formulario {
+        margin: 0;
+        width: 100%;
+        margin-top: 100px;
+    }
+    .opciones {
+        margin-top: 100px;
+    }
+}
+
+@media (max-width: 500px) {
+    .nombreArch,
+    .botonInput {
+        display: block;
+    }
+    .nombreArch {
+        float: none;
+        width: 100%;
+    }
+    .botonInput {
+        margin-top: 10px;
+        float: none;
+    }
+}
+
+@media (min-width: 1500px) {
+    .contenedorTabla {
+        width: 100%;
+    }
+    .tabla {
+        margin: 0;
+        width: 100%;
+        margin-top: 100px;
+        height: 500px;
+    }
+    .paginador {
+        margin-top: 100px;
+    }
+}
+
+@media (max-width: 800px) {
+    .botonVerCurriculum {
+        display: none;
+    }
+    .descargaPDF {
+        display: inline-block;
+    }
+    .botonVerCroquis {
+        display: none;
+    }
+    .descargaCroquis {
+        display: inline-block;
+    }
+}
+
+@media (min-width: 801px) {
+    .botonVerCurriculum {
+        display: inline-block;
+    }
+    .descargaPDF {
+        display: none;
+    }
+    .botonVerCroquis {
+        display: inline-block;
+    }
+    .descargaCroquis {
+        display: none;
+    }
+}
+
+@media (max-width: 360px) {
+    .botonQuitaCroquis {
+        margin-left: 20%
+    }
+}
+
+@media (min-width: 361px) {
+    .botonQuitaCroquis {
+        margin-left: 18%
+    }
+}
+
+@media (min-width: 400px) {
+    .botonQuitaCroquis {
+        margin-left: 15%
+    }
+}
+
+@media (min-width: 450px) {
+    .botonQuitaCroquis {
+        margin-left: 13%
+    }
+}
+
+@media (min-width: 500px) {
+    .botonQuitaCroquis {
+        margin-left: 11%
+    }
+}
+
+@media (min-width: 550px) {
+    .botonQuitaCroquis {
+        margin-left: 9%
+    }
+}
+
+@media (min-width: 600px) {
+    .botonQuitaCroquis {
+        margin-left: 8%
+    }
+}
+
+@media (min-width: 670px) {
+    .botonQuitaCroquis {
+        margin-left: 7%
+    }
+}
+
+@media (min-width: 720px) {
+    .botonQuitaCroquis {
+        margin-left: 6%
+    }
+}
+
+@media (min-width: 750px) {
+    .botonQuitaCroquis {
+        margin-left: 5%
+    }
+}
+
+@media (min-width: 800px) {
+    .botonQuitaCroquis {
+        margin-left: 3%
+    }
+}
+
+@media (min-width: 1500px) {
+    .botonQuitaCroquis {
+        margin-left: 2%
+    }
+}

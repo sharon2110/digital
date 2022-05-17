@@ -1,0 +1,186 @@
+/* OPCIONES RAPIDAS*/
+
+.opciones {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    margin-top: 15px;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.opciones li {
+    margin: 5px 20px;
+    height: 40px;
+    line-height: 40px;
+    list-style: none;
+}
+
+.opciones li a {
+    height: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+    min-width: 200px;
+    width: auto;
+    display: block;
+    text-align: center;
+    user-select: none;
+    transition: all .2s ease-in-out;
+    border-bottom: 2px solid transparent;
+}
+
+.opciones li a.active {
+    color: rgb(216, 100, 54);
+    cursor: none;
+    pointer-events: none;
+}
+
+.opciones a {
+    position: relative;
+}
+
+.opciones li a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(216, 100, 54);
+    z-index: 100;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.5s ease-in-out;
+}
+
+.opciones a:hover::before {
+    transform: scaleX(1);
+}
+
+.filtro {
+    border: 1px solid #909e40;
+    background-color: rgb(216, 196, 152);
+    padding: 15px;
+    border-radius: 3px;
+    margin-right: 25px;
+    margin-left: 25px;
+    margin-bottom: 20px;
+    color: rgb(0, 0, 0);
+    width: 100%;
+}
+
+label {
+    color: rgb(0, 0, 0);
+    padding-top: 0px;
+    margin-bottom: 0;
+}
+
+body::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+body::-webkit-scrollbar:vertical {
+    width: 7px;
+}
+
+body::-webkit-scrollbar-button:increment,
+.contenedor::-webkit-scrollbar-button {
+    display: none;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #917d9e;
+    border-radius: 20px;
+    border: 1px solid #171718;
+}
+
+body::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+.botonElimina {
+    background-color: rgb(207, 127, 107);
+    border-radius: 25%;
+    width: 40px;
+    height: 40px;
+    color: rgb(255, 255, 255);
+}
+
+.paginador {
+    display: block;
+    margin: auto;
+}
+
+.atras {
+    background-color: rgb(148, 158, 152);
+    color: rgb(255, 255, 255);
+}
+
+.adelante {
+    background-color: rgb(148, 158, 152);
+    color: rgb(255, 255, 255);
+}
+
+.atras:hover {
+    background-color: rgb(24, 119, 62);
+    color: rgb(255, 255, 255);
+}
+
+.adelante:hover {
+    background-color: rgb(24, 119, 62);
+    color: rgb(255, 255, 255);
+}
+
+.numpag a {
+    background-color: rgb(245, 236, 236);
+    color: rgb(0, 0, 0);
+    border-radius: 15%;
+}
+
+.numpag a:hover {
+    background-color: rgb(211, 138, 89);
+    color: rgb(245, 236, 236)
+}
+
+.botonElimina:hover {
+    background-color: rgb(202, 41, 41);
+    border-radius: 25%;
+    width: 40px;
+    height: 40px;
+    color: rgb(255, 255, 255);
+}
+
+.tabla thead {
+    background-color: rgb(89, 161, 80) !important;
+}
+
+.tabla thead tr {
+    color: rgb(255, 255, 255) !important;
+}
+
+.tabla tbody tr {
+    background-color: rgb(211, 214, 219) !important;
+}
+
+.tabla tbody tr:hover {
+    color: rgb(255, 255, 255) !important;
+    background-color: rgb(152, 158, 194) !important;
+}
+
+.contenedorTabla {
+    width: 100%;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.saldo {
+    background-color: rgb(109, 136, 179);
+    margin-top: 15px;
+    margin-left: 10px;
+    padding: 15px;
+    border-radius: 3%;
+}

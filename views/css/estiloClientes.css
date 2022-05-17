@@ -1,0 +1,479 @@
+/* OPCIONES RAPIDAS*/
+
+.opciones {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    margin-top: 15px;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.opciones li {
+    margin: 5px 20px;
+    height: 40px;
+    line-height: 40px;
+    list-style: none;
+}
+
+.opciones li a {
+    height: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+    min-width: 200px;
+    width: auto;
+    display: block;
+    text-align: center;
+    user-select: none;
+    transition: all .2s ease-in-out;
+    border-bottom: 2px solid transparent;
+}
+
+.opciones li a.active {
+    color: rgb(216, 100, 54);
+    cursor: none;
+    pointer-events: none;
+}
+
+.opciones a {
+    position: relative;
+}
+
+.opciones li a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(216, 100, 54);
+    z-index: 100;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.5s ease-in-out;
+}
+
+.opciones a:hover::before {
+    transform: scaleX(1);
+}
+
+
+/* FORMULARIO DE REGISTRO */
+
+legend {
+    font-size: 17px;
+}
+
+.formulario {
+    border: 1px solid #707ea0;
+    background-color: #e3e3e9;
+    padding: 15px;
+    border-radius: 3px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 0px;
+    width: 80%;
+    margin-top: 0;
+}
+
+label {
+    color: rgb(109, 106, 106);
+    padding-top: 10px;
+    margin-bottom: 0;
+    font-size: 13px !important;
+}
+
+body main section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+body #perfil {
+    background-color: rgb(109, 135, 149);
+    width: 100px;
+    height: 100px;
+    border: 2px dotted white;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-left: 20px;
+    padding: 0;
+    border-radius: 3%;
+}
+
+body #perfil i {
+    color: white;
+    font-size: 30px;
+}
+
+body #perfil input {
+    display: none;
+}
+
+body #perfil img {
+    display: none;
+    height: 100px;
+    width: 100px !important;
+    padding: 0;
+    border-radius: 0!important;
+    margin: 0;
+}
+
+body #perfil:hover {
+    border: 3px solid white;
+}
+
+.botonLimpiar {
+    background-color: rgb(216, 146, 54);
+    color: rgb(255, 255, 255);
+    transition: all .2s ease-in-out;
+}
+
+.botonGuardar {
+    background-color: rgb(99, 54, 184);
+    color: rgb(255, 255, 255);
+    transition: all .2s ease-in-out;
+}
+
+.botonLimpiar:hover {
+    background-color: rgb(230, 176, 105);
+    border-color: rgb(230, 176, 105);
+    color: rgb(0, 0, 0);
+}
+
+.botonGuardar:hover {
+    background-color: rgb(154, 117, 223);
+    border-color: rgb(163, 113, 221);
+    color: rgb(0, 0, 0);
+}
+
+.botonLimpiar:checked {
+    box-shadow: 16px 16px rgb(230, 176, 105) !important;
+}
+
+.botonGuardar:checked {
+    box-shadow: rgb(154, 117, 223) !important;
+}
+
+body::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+body::-webkit-scrollbar:vertical {
+    width: 7px;
+}
+
+body::-webkit-scrollbar-button:increment,
+.contenedor::-webkit-scrollbar-button {
+    display: none;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #917d9e;
+    border-radius: 20px;
+    border: 1px solid #171718;
+}
+
+body::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+
+/* ESTILOS DE LISTA CLIENTES*/
+
+.contenedorTabla {
+    width: 100%;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.tabla {}
+
+.tabla thead {
+    background-color: rgb(56, 48, 77);
+    color: rgb(252, 242, 242);
+}
+
+.tabla tbody tr {
+    background-color: rgb(238, 240, 244);
+    margin-right: 20px;
+}
+
+.tabla tbody tr:hover {
+    background-image: linear-gradient(230deg, #cce6ee 0, #cde6f0 7.14%, #cfe5f1 14.29%, #d0e5f2 21.43%, #d2e4f3 28.57%, #d5e3f4 35.71%, #d7e3f4 42.86%, #dae2f4 50%, #dde1f4 57.14%, #e0e0f3 64.29%, #e3e0f2 71.43%, #e5dff1 78.57%, #e8def0 85.71%, #ebdeee 92.86%, #edddec 100%);
+    color: rgb(138, 52, 26);
+}
+
+.botonActualiza {
+    background-color: rgb(42, 82, 156);
+    border-radius: 25%;
+    width: 30px;
+    height: 30px;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    padding: 5px;
+    text-align: center;
+    line-height: normal;
+}
+
+.botonActualiza:hover {
+    background-color: rgb(59, 148, 93);
+    width: 30px;
+    height: 30px;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    padding: 5px;
+}
+
+.botonElimina {
+    background-color: rgb(189, 108, 88);
+    border-radius: 25%;
+    width: 30px;
+    height: 30px;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    padding: 5px;
+    text-align: center;
+    line-height: normal;
+}
+
+.botonElimina:hover {
+    background-color: rgb(202, 41, 41);
+    border-radius: 25%;
+    width: 30px;
+    height: 30px;
+    color: rgb(255, 255, 255);
+}
+
+.botonBuscar {
+    background-color: rgb(134, 190, 132);
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    padding: 5px;
+}
+
+.botonBuscar:hover {
+    background-color: rgb(50, 112, 48);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.paginador {
+    display: block;
+    margin: auto;
+}
+
+.atras {
+    background-color: rgb(148, 158, 152);
+    color: rgb(255, 255, 255);
+}
+
+.adelante {
+    background-color: rgb(148, 158, 152);
+    color: rgb(255, 255, 255);
+}
+
+.atras:hover {
+    background-color: rgb(24, 119, 62);
+    color: rgb(255, 255, 255);
+}
+
+.adelante:hover {
+    background-color: rgb(24, 119, 62);
+    color: rgb(255, 255, 255);
+}
+
+.numpag a {
+    background-color: rgb(245, 236, 236);
+    color: rgb(0, 0, 0);
+    border-radius: 15%;
+}
+
+.numpag a:hover {
+    background-color: rgb(211, 138, 89);
+    color: rgb(245, 236, 236)
+}
+
+.active.numpag a {
+    background-color: rgb(211, 138, 89) !important;
+    color: rgb(245, 236, 236) !important;
+    border-radius: 15% !important;
+    border-color: rgb(211, 138, 89) !important;
+}
+
+.active.numpag {
+    background-color: rgb(211, 138, 89) !important;
+    color: rgb(245, 236, 236) !important;
+    border-radius: 15% !important;
+    border-color: rgb(211, 138, 89) !important;
+}
+
+
+/* ESTILOS DE BUSCA CLIENTES*/
+
+.tablaresbus {
+    display: none;
+}
+
+.busqueda {
+    background-color: rgb(222, 222, 222);
+    border-radius: 2px;
+    width: 100%;
+    margin: auto;
+    padding-top: 5px;
+    margin-bottom: 50px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.labelBusqueda {
+    font-weight: bold;
+}
+
+
+/* ESTILOS DE ACTUALIZA CLIENTE*/
+
+.botonActualizar {
+    background-color: rgb(30, 148, 49);
+    color: rgb(255, 255, 255);
+    transition: all .2s ease-in-out;
+}
+
+.botonActualizar:hover {
+    background-color: rgb(84, 180, 88);
+    border-color: rgb(230, 176, 105);
+    color: rgb(0, 0, 0);
+}
+
+.botonActualizar:checked {
+    box-shadow: 16px 16px rgb(230, 176, 105) !important;
+}
+
+.botonGuardar:checked {
+    box-shadow: rgb(154, 117, 223) !important;
+}
+
+.botonQuitaFoto {
+    display: inline-block;
+    height: 25px;
+    margin-right: auto;
+    padding: 0px;
+    width: 7%;
+    margin-top: 5px;
+}
+
+@media (min-width: 1500px) {
+    .formulario {
+        margin: 0;
+        width: 100%;
+        margin-top: 100px;
+    }
+    .opciones {
+        margin-top: 100px;
+    }
+}
+
+@media (min-width: 1500px) {
+    .contenedorTabla {
+        width: 100%;
+    }
+    .tabla {
+        margin: 0;
+        width: 100%;
+        margin-top: 100px;
+        height: 500px;
+    }
+    .paginador {
+        margin-top: 100px;
+    }
+}
+
+@media (max-width: 360px) {
+    .botonQuitaFoto {
+        margin-left: 20%
+    }
+}
+
+@media (min-width: 361px) {
+    .botonQuitaFoto {
+        margin-left: 18%
+    }
+}
+
+@media (min-width: 400px) {
+    .botonQuitaFoto {
+        margin-left: 15%
+    }
+}
+
+@media (min-width: 450px) {
+    .botonQuitaFoto {
+        margin-left: 13%
+    }
+}
+
+@media (min-width: 500px) {
+    .botonQuitaFoto {
+        margin-left: 11%
+    }
+}
+
+@media (min-width: 550px) {
+    .botonQuitaFoto {
+        margin-left: 9%
+    }
+}
+
+@media (min-width: 600px) {
+    .botonQuitaFoto {
+        margin-left: 8%
+    }
+}
+
+@media (min-width: 670px) {
+    .botonQuitaFoto {
+        margin-left: 7%
+    }
+}
+
+@media (min-width: 720px) {
+    .botonQuitaFoto {
+        margin-left: 6%
+    }
+}
+
+@media (min-width: 750px) {
+    .botonQuitaFoto {
+        margin-left: 5%
+    }
+}
+
+@media (min-width: 800px) {
+    .botonQuitaFoto {
+        margin-left: 3%
+    }
+}
+
+@media (min-width: 1500px) {
+    .botonQuitaFoto {
+        margin-left: 2%
+    }
+}
